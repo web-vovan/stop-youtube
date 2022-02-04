@@ -22,3 +22,25 @@ function setPageBackgroundColor() {
         document.body.style.backgroundColor = color;
     });
 }
+
+// chrome.tabs.query(
+//     {
+//         active: true,
+//         currentWindow: true
+//     },
+//     ([currentTab]) => {
+//         const url = new URL(currentTab.url);
+//         const domain = url.hostname;
+//         console.log(domain);
+//     }
+// );
+
+// let test = document.getElementById('domain');
+// test.textContent('hello');
+
+chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    var tab = tabs[0];
+    var url = new URL(tab.url)
+    var domain = url.hostname
+    // `domain` now has a value like 'example.com'
+})
