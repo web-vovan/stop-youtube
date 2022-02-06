@@ -4,10 +4,14 @@ body {
 
 #changeButton {
     margin: 30px;
+    display: inline-block;
+    height: 128px;
+    width: 128px;
+    background-image: url("/images/active.svg");
 }
 
-#changeButton.active {
-    color: red;
+#changeButton.block {
+    background-image: url("/images/block.svg");
 }
 
 .time {
