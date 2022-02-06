@@ -1,14 +1,13 @@
-chrome.storage.sync.get("active", function({ active }) {
-    if (active === true) {
-        document.body.innerHTML = '<div class="wrap"><div class="title">Stop youtube</div></div>';
+chrome.storage.sync.get(['active', 'startTime', 'endTime'], function({active, startTime, endTime}) {
+    let today = new Date()
+    let time = today.getHours() + ':' + today.getMinutes()
+
+    if (active === true && time <= endTime && time >=startTime) {
+        blockYoutubePage()
     }
 });
 
-
-
-
-// chrome.storage.sync.get("color", function({ color }) {
-//     console.log('Значение переменной: ' + color);
-// });
-
-
+function blockYoutubePage()
+{
+    document.body.innerHTML = '<div class="wrap"><div class="title">Stop youtube</div></div>';
+}

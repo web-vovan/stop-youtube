@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+#changeButton {
+    margin: 30px;
+}
+
+#changeButton.active {
+    color: red;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.time input {
+    margin: 0 10px;
+    font-size: 20px;
+}

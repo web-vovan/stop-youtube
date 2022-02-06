@@ -2,10 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-<button id="changeButton"></button>
+<button id="changeButton">test</button>
+
+<div class="time">
+    <input type="time" id="startTimeField" name="startTimeField"
+           min="00:00" max="24:00" required>
+    <span>-</span>
+    <input type="time" id="endTimeField" name="endTimeField"
+           min="00:00" max="24:00" required>
+</div>
+
 <script src="popup.js"></script>
 </body>
 </html>
