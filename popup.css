@@ -8,6 +8,7 @@ body {
     height: 128px;
     width: 128px;
     background-image: url("/images/active.svg");
+    cursor: pointer;
 }
 
 #changeButton.block {
@@ -24,5 +25,10 @@ body {
 
 .time input {
     margin: 0 10px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 5px solid red;
+    border-radius: 10px;
+    color: red;
+    padding: 5px 10px
 }
