@@ -3,11 +3,13 @@ chrome.storage.sync.get(['active', 'startTime', 'endTime'], function({active, st
     let time = today.getHours() + ':' + today.getMinutes()
 
     if (active === true && time <= endTime && time >=startTime) {
-        blockYoutubePage()
+        blockYoutubePage(endTime)
     }
 });
 
-function blockYoutubePage()
+function blockYoutubePage(endTime)
 {
-    document.body.innerHTML = '<div class="wrap"><div class="title">Stop youtube</div></div>';
+    let htmlElement = document.querySelector("html");
+    htmlElement.innerHTML = '<body></body><div class="wrap"><div class="title">Stop Youtube</div></div>';
+    window.stop()
 }
